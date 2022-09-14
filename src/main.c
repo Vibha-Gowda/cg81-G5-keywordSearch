@@ -37,7 +37,7 @@ int main(int argc, char** argv){
         printf("\nKey: %s", temp2->key);
 
         for(int i=0; i<temp2->index; i++)
-            printf("\n:%s", temp2->projectIds[i]);
+            printf("\n%s:\t%30s", temp2->projectIds[i], temp2->projectTitle[i]);
         printf("\n");
 
         temp2=temp2->next;

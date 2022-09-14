@@ -16,6 +16,7 @@ typedef struct project{
 typedef struct keyword{
 	char key[50];
 	char projectIds[50][20];
+    char projectTitle[50][STR_SIZE];
     int index;
     //to do define keyword mutex 
     pthread_mutex_t lock;

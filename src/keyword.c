@@ -8,12 +8,14 @@
 
 void keywordSearch(sp *p1, char *token, skw **keywordll)
 {
+    token[strlen(token)-1]='\0';
 
     if((*keywordll)==NULL){
         skw* newNode = (skw*) calloc(1, sizeof(skw));
         strcpy(newNode->key, token);
         newNode->index=0;
         strcpy(newNode->projectIds[newNode->index], p1->projectId);
+        strcpy(newNode->projectTitle[newNode->index], p1->projectTitle);
         newNode->index+=1;
         newNode->next= NULL;
         
@@ -31,6 +33,7 @@ void keywordSearch(sp *p1, char *token, skw **keywordll)
             pthread_mutex_lock(&(temp->lock));
 
             strcpy(temp->projectIds[temp->index], p1->projectId);
+            strcpy(temp->projectTitle[temp->index], p1->projectTitle);
             temp->index+=1;
 
             //unlock Mutex
@@ -44,6 +47,7 @@ void keywordSearch(sp *p1, char *token, skw **keywordll)
                     pthread_mutex_lock(&(temp->next->lock));
 
                     strcpy(temp->next->projectIds[temp->next->index], p1->projectId);
+                    strcpy(temp->next->projectTitle[temp->next->index], p1->projectTitle);
                     temp->next->index+=1;
 
                     //Unlock Mutex
@@ -55,6 +59,7 @@ void keywordSearch(sp *p1, char *token, skw **keywordll)
             temp->next = (skw*) calloc(1, sizeof(skw));
             strcpy(temp->next->key, token);
             strcpy(temp->next->projectIds[temp->next->index], p1->projectId);
+            strcpy(temp->next->projectTitle[temp->next->index], p1->projectTitle);
             temp->next->index+=1;
 
             //Initialize Mutex
@@ -76,7 +81,7 @@ void* extract_project_details(void *tempfile){
 
     //to do validations
     if(!validation((char*)tempfile)){
-        printf("Error! File invalid <%s>", (char*)tempfile);
+        printf("\nError! File invalid <%s>", (char*)tempfile);
         exit(0);
     }
 

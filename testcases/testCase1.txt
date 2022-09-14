@@ -1,5 +1,5 @@
 Project ID-PROJ001
-Project Title-Computational Modeling of Lube-Oil Flows in Pipelines to Study the Efficacy of Flushing Operations
+Project Title-Computational Modeling of Lube Oil Flows in Pipelines to Study the Efficacy of Flushing Operations
 Keyword-Computer Aided Chemical Engineering
 Keyword-Computation Models
 Keyword-Pipeline Scheduling
