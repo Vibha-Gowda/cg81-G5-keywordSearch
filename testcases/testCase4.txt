@@ -1,0 +1,10 @@
+Project ID-PROJ004
+Project Title-Research and Development of C Language Programming Experiment Assistant Management Platform Based on Hybrid Architecture
+Keyword-C language programming 
+Keyword-Hybrid Architecture
+Author-Ye Chen
+Author-Ren Zhikao
+Author-Chen Chunping
+Abstract-C language experiment management and the control model based on hybrid architecture of C/S and B/S are presented by studying C language programming experiment assistant platform, and apply these results to control and manage experimental process and teaching effects, and realize paperless mode of C language programming teaching and experiment process, at the same time, in a certain extent, to improve experiment teaching quality and teaching effect. 
+Reference-Article=Karli Watson Christian Nagel A programmer’s Introduction to C#
+Reference-Chapter=Application and Research of C Language Programming Examination System Based on B/S,Third International Symposium on Information Processing

@@ -1,0 +1,10 @@
+Project ID-PROJ002
+Project Title-Optimisation frameworks for integrated planning with allocation of transportation resources for industrial gas supply chains
+Keyword-Computer Aided Chemical Engineering
+Keyword-Computers & Chemical Engineering
+Keyword-Transportation
+Abstract-This work addresses the integrated optimisation of production-distribution planning and allocation of transportation resources for industrial gas supply chains. The production-distribution planning decisions include the production plan, purchasing plan for both a liquefied product and raw material from external suppliers, distribution plan by railcars and trucks, and demand allocation. In contrast, the allocating decisions of transportation resources involve the number of trucks and railcars at each plant, depot, and third-party supplier. First, we propose a mixed-integer nonlinear programming (MINLP) model, and then the MINLP model is reformulated as a mixed-integer linear fractional programming (MILFP) model. Furthermore, we present a multi-objective optimisation (MOO) model as an alternative approach. As solution strategies, we adopt Dinkelbachs algorithm and the reformulation-linearisation method for the MILFP model, whereas the ε-constraint method is used for the MOO model. Finally, industry-relevant case studies illustrate the applicability and performance of the proposed models and solution methods.
+Author-Yena Lee
+Author-Jose Pinto
+Reference-Article=Hierarchical Approach to Integrated Planning of Industrial Gas Supply Chains
+Reference-Chapter=Advanced decision-support technologies for the design and management of industrial gas supply chains

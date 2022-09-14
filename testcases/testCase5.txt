@@ -1,0 +1,10 @@
+Keyword-Hardware Security
+Keyword-Hardware trojan 
+Keyword-Proof-carrying hardware
+Keyword-Trusted hardware platform
+Abstract-Hardware security has become a hot topic recently with more and moreresearchers from related research domains joining this area. However, the understandingof hardware security is often mixed with cybersecurity and cryptography, especiallycryptographic hardware. For the same reason, the research scope of hardware security hasnever been clearly deﬁned. To help researchers who have recently joined in this area betterunderstand the challenges and tasks within the hardware security domain and to help bothacademia and industry investigate countermeasures and solutions to solve hardware securityproblems, we will introduce the key concepts of hardware security as well as its relations torelated research topics in this survey paper. Emerging hardware security topics will also beclearly depicted through which the future trend will be elaborated, making this survey papera good reference for the continuing research efforts in this area. 
+Author-Jin Y
+Author-Feng X
+Author-Appel A W
+Reference-Article=Concept and PrototypeTool Flow for Online Veriﬁcation
+Reference-Chapter=Symposium on Principles of Programming Languages
