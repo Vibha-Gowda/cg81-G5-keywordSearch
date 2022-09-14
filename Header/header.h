@@ -29,11 +29,7 @@ extern skw *keywordll;
 
 void* extract_project_details(void *);
 int validation(char* tempfile);
+int result_Valid(char *key);
+void cleanFunc();
 
 #endif
-
-
-/* 
-gdb -g
-
-*/

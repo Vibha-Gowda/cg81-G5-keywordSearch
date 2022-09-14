@@ -31,36 +31,30 @@ int main(int argc, char** argv){
     }
 
     
+    FILE *fptr2;
+    fptr2 = fopen("/home/Code/data/result.txt", "w");
 
     skw *temp2 = keywordll;
     while(temp2!=NULL){
-        printf("\nKey: %s", temp2->key);
+        printf("Key: %s", temp2->key);
+        fprintf(fptr2, "\nKeyword: %s", temp2->key);
 
-        for(int i=0; i<temp2->index; i++)
-            printf("\n%s:\t%30s", temp2->projectIds[i], temp2->projectTitle[i]);
-        printf("\n");
+        for(int i=0; i<temp2->index; i++){
+            printf("\n%s", temp2->projectIds[i]);
+            printf(" :%s", temp2->projectTitle[i]);
+            
+            fprintf(fptr2, "\n%s", temp2->projectIds[i]);
+            fprintf(fptr2, " :%s", temp2->projectTitle[i]);
+
+        }
+        printf("\n\n\n");
+        fprintf(fptr2,"\n\n\n");
 
         temp2=temp2->next;
     }
-    
 
-    sp* temp;
-    while(projectll!=NULL){
-        temp=projectll;
-        projectll=projectll->next;
+    fclose(fptr2);
 
-        free(temp);
-    }
-
-    skw* temp1;
-    while(keywordll!=NULL){
-        temp1=keywordll;
-        keywordll=keywordll->next;
-
-        pthread_mutex_destroy(&(temp1->lock));
-        free(temp1);
-    }
-
-
+    cleanFunc();
     return 0;
 }

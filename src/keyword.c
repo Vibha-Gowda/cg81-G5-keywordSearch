@@ -22,6 +22,7 @@ void keywordSearch(sp *p1, char *token, skw **keywordll)
         //Initialize Mutex
         if(pthread_mutex_init(&(newNode->lock), NULL)!=0){
             printf("\nError! Mutex init has failed\n");
+            cleanFunc();
             exit(0);
         }
         (*keywordll) = newNode;
@@ -65,6 +66,7 @@ void keywordSearch(sp *p1, char *token, skw **keywordll)
             //Initialize Mutex
             if(pthread_mutex_init(&(temp->next->lock), NULL)!=0){
                 printf("\nError! Mutex init has failed\n");
+                cleanFunc();
                 exit(0);
             }
             temp->next->next = NULL;
@@ -82,12 +84,14 @@ void* extract_project_details(void *tempfile){
     //to do validations
     if(!validation((char*)tempfile)){
         printf("\nError! File invalid <%s>", (char*)tempfile);
+        cleanFunc();
         exit(0);
     }
 
 
     if(!fptr){
         printf("Error! file not found: %s", (char*)tempfile);
+        cleanFunc();
         exit(0);
     }
 
@@ -187,6 +191,62 @@ int validation(char* tempfile){
         return 1;
 
     return 0;
+}
+
+
+
+
+int result_Valid(char *key)
+{
+    FILE *fptr = fopen("../data/result.txt","r");
+    if(!fptr)
+        printf("\nError: Result file not found");
+
+    int flag=0, count=0;
+    char str[SIZE], *token;
+
+    //reading line by line
+    while(fgets(str, SIZE, stdin)){
+
+        token = strtok(str, " ");
+
+        if(flag==1){
+            if(strcmp(token, "Keyword:")==0)
+                break;
+
+            count+=1;
+        }
+
+        while(token!=NULL && flag!=1){
+            if(strcmp(key, token)==0){
+                flag=1;
+            }
+
+            token = strtok(NULL, " ");
+        }
+    }
+
+    return count;
+}
+
+
+void cleanFunc(){
+    sp* temp;
+    while(projectll!=NULL){
+        temp=projectll;
+        projectll=projectll->next;
+
+        free(temp);
+    }
+
+    skw* temp1;
+    while(keywordll!=NULL){
+        temp1=keywordll;
+        keywordll=keywordll->next;
+
+        pthread_mutex_destroy(&(temp1->lock));
+        free(temp1);
+    }
 }
 
 
