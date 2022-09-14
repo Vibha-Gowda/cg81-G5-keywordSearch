@@ -16,7 +16,7 @@ typedef struct project{
 
 typedef struct keyword{
 	char key[50];
-	char projectIds[ARR_SIZE][20];
+	char projectIds[ARR_SIZE][ARR_SIZE];
     char projectTitle[ARR_SIZE][STR_SIZE];
     int index;
     //to do define keyword mutex 
