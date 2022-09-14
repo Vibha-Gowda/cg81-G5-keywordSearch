@@ -83,78 +83,75 @@ void* extract_project_details(void *tempfile){
 
     //to do validations
     if(!validation((char*)tempfile)){
-        printf("\nError! File invalid <%s>", (char*)tempfile);
-        cleanFunc();
-        exit(0);
+        printf("\nError! File invalid <%s>\n", (char*)tempfile);
     }
-
-
-    if(!fptr){
-        printf("Error! file not found: %s", (char*)tempfile);
-        cleanFunc();
-        exit(0);
+    else if(!fptr){
+        printf("\nError! file not found: %s\n", (char*)tempfile);
     }
+    else{
 
-    printf("\nExtracting.. %s", (char*)tempfile);
+        printf("\nExtracting.. %s", (char*)tempfile);
 
-    sp *new_pro_node = (sp*) calloc(1, sizeof(sp));
-    new_pro_node->next = NULL;
+        sp *new_pro_node = (sp*) calloc(1, sizeof(sp));
+        new_pro_node->next = NULL;
 
-    skw *new_key_node = NULL;
-    skw *temp;
+        skw *new_key_node = NULL;
+        skw *temp;
 
-    int proID, proT, keyw;
-    proID=proT=keyw=0;
-    
-    char str[SIZE], *token, keySearch[SIZE];
-    while(fgets(str, SIZE, fptr)){
+        int proID, proT, keyw;
+        proID=proT=keyw=0;
+        
+        char str[SIZE], *token, keySearch[SIZE];
+        while(fgets(str, SIZE, fptr)){
 
-        token = strtok(str, "-");
-        while(token!=NULL){
-            
-            if(strcmp(token, project_id_str)==0)
-                proID+=1;
+            token = strtok(str, "-");
+            while(token!=NULL){
+                
+                if(strcmp(token, project_id_str)==0)
+                    proID+=1;
 
-            else if(proID==1){
-                token[strlen(token)-1]='\0';
-                strcpy(new_pro_node->projectId, token);
-                proID=0;
+                else if(proID==1){
+                    token[strlen(token)-1]='\0';
+                    strcpy(new_pro_node->projectId, token);
+                    proID=0;
 
-                if(projectll==NULL)
-                    projectll=new_pro_node;
-                else{
-                    sp *temp = projectll;
+                    if(projectll==NULL)
+                        projectll=new_pro_node;
+                    else{
+                        sp *temp = projectll;
 
-                    while(temp->next!=NULL){
-                        temp=temp->next;
+                        while(temp->next!=NULL){
+                            temp=temp->next;
+                        }
+                        temp->next=new_pro_node;
+                        new_pro_node->next = NULL;
                     }
-                    temp->next=new_pro_node;
-                    new_pro_node->next = NULL;
+                }	
+
+                else if(strcmp(token, project_title_str)==0)
+                    proT+=1;
+
+                else if(proT==1){
+                    token[strlen(token)-1]='\0';
+                    strcpy(new_pro_node->projectTitle, token);
+                    proT=0;
                 }
-            }	
 
-            else if(strcmp(token, project_title_str)==0)
-                proT+=1;
+                else if(strcmp(token, keyword_str)==0)
+                    keyw+=1;
 
-            else if(proT==1){
-                token[strlen(token)-1]='\0';
-                strcpy(new_pro_node->projectTitle, token);
-                proT=0;
+                else if(keyw==1){
+                    strcpy(keySearch, token);
+                    keywordSearch(new_pro_node, keySearch, &keywordll);
+                    keyw=0;
+                }
+
+                
+
+                token=strtok(NULL, "-");
             }
-
-            else if(strcmp(token, keyword_str)==0)
-                keyw+=1;
-
-            else if(keyw==1){
-                strcpy(keySearch, token);
-                keywordSearch(new_pro_node, keySearch, &keywordll);
-                keyw=0;
-            }
-
-            
-
-            token=strtok(NULL, "-");
         }
+
     }
 
     fclose(fptr);
@@ -172,7 +169,7 @@ int validation(char* tempfile){
     while(fgets(str, SIZE, fptr)){
 
         token = strtok(str, "-");
-        while(token!=NULL){
+        // while(token!=NULL){
 
             if(strcmp(token, project_id_str)==0)
                 proID+=1;
@@ -181,8 +178,8 @@ int validation(char* tempfile){
             else if(strcmp(token, keyword_str)==0)
                 keyw+=1;
             
-            token=strtok(NULL, "-");
-        }
+            // token=strtok(NULL, "-");
+        // }
     }
 
     fclose(fptr);
