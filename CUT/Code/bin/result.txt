@@ -1,0 +1,17 @@
+
+Key: Computer Aided Chemical Engineering
+PROJ001:	Computational Modeling of Lube Oil Flows in Pipelines to Study the Efficacy of Flushing Operations
+PROJ002:	Optimisation frameworks for integrated planning with allocation of transportation resources for industrial gas supply chains
+PROJ003:	To study the integration planning and fetching graphical anlysis for different pipeline scheduling techniques.
+Key: Computation Models
+PROJ001:	Computational Modeling of Lube Oil Flows in Pipelines to Study the Efficacy of Flushing Operations
+Key: Pipeline Scheduling
+PROJ001:	Computational Modeling of Lube Oil Flows in Pipelines to Study the Efficacy of Flushing Operations
+PROJ003:	To study the integration planning and fetching graphical anlysis for different pipeline scheduling techniques.
+Key: Transportation
+PROJ001:	Computational Modeling of Lube Oil Flows in Pipelines to Study the Efficacy of Flushing Operations
+PROJ002:	Optimisation frameworks for integrated planning with allocation of transportation resources for industrial gas supply chains
+PROJ003:	To study the integration planning and fetching graphical anlysis for different pipeline scheduling techniques.
+Key: Computers & Chemical Engineering
+PROJ002:	Optimisation frameworks for integrated planning with allocation of transportation resources for industrial gas supply chains
+PROJ003:	To study the integration planning and fetching graphical anlysis for different pipeline scheduling techniques.

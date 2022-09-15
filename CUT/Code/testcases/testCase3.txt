@@ -1,0 +1,12 @@
+Project ID-PROJ003
+Project Title-To study the integration planning and fetching graphical anlysis for different pipeline scheduling techniques.
+Keyword-Computer Aided Chemical Engineering
+Keyword-Computers & Chemical Engineering
+Keyword-Pipeline Scheduling
+Keyword-Transportation
+Abstract- The models developed are validated against the data collected from well-designed flush-study experiments, and a good agreement is observed. We generate theoretical optimal flowrate profiles and provide insights for designing and controlling the flushing operation. This work addresses the integrated optimisation of production-distribution planning and allocation of transportation resources for industrial gas supply chains. The production-distribution planning decisions include the production plan, purchasing plan for both a liquefied product and raw material from external suppliers, distribution plan by railcars and trucks, and demand allocation. In contrast, the allocating decisions of transportation resources involve the number of trucks and railcars at each plant, depot, and third-party supplier. First, we propose a mixed-integer nonlinear programming (MINLP) model, and then the MINLP model is reformulated as a mixed-integer linear fractional programming (MILFP) model. Furthermore, we present a multi-objective optimisation (MOO) model as an alternative approach. 
+Author-Ye Chen
+Author-Ren Zhikao
+Author-Chen Chunping
+Reference-Article=Research on general paperless examination system
+Reference-Chapter=u, Application and Research of C Language Programming Examination System Based on B/S,Third International Symposium on Information Processing
