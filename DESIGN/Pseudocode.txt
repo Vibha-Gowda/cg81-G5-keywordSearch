@@ -1,0 +1,47 @@
+//Filenames of Research Papers will be taken as input from the user
+//This application will show a keyword and its corresponding projectID and Project Title
+//in which that keyword is appearing.A specific keyword can appear across more than one files.
+
+
+------Input Files--------
+
+1.Filenames of Research Papers
+
+
+------Functions in the Pseudocode------
+
+A.File parsing and validation Function
+B.Keyword Search function
+
+-------Pseudocode---------
+
+A. File parsing and validation Function :
+    
+   -----START----- 
+1.Open file in read mode.
+2.check if file is available or not. 
+     if NOT available Display Error .
+      Go to Next file.
+3.Parse the file line by line
+4.Extract ProjectID,ProjectTitle,Keywords using strtok
+5.if projectID/ProjectTitle/Keyword == NULL
+         Store the filename in invalid file
+         Go to next file
+   else
+        Store the above data into project and keyword structure Linkedlist.
+6.Pass Keyword Structure to Keyword search Function.
+    ------END------
+
+
+B.Keyword Search function :
+
+   ------START------
+keywordSearch(projectArr, keywordll)
+
+1.Travser the keyword linked list
+2.Check whether the current keyword is present 
+3.if present
+    Update ProjectID[] array,ProjectTitle[] of the node in which keyword is present
+   else
+    create new node for the given keyword and update the project ID ,project Title
+    -----END-----

@@ -1,0 +1,10 @@
+Project ID-PROJ001
+Project Title-Computational Modeling of Lube-Oil Flows in Pipelines to Study the Efficacy of Flushing Operations
+Keyword-Computer Aided Chemical Engineering
+Keyword-Computation Models
+Keyword-Pipeline Scheduling
+Abstract-Lube-oil industries use a complex network of pipelines for transporting thousands of high-value finished products successively in batches throughout the production plant. Each lube-oil is unique in regard to its properties, and its integrity is extremely crucial. Therefore, during a changeover operation, the lines are flushed using a high-value finished product of the current batch that is desired to be processed. The existing flushing operation typically rely on a trial-and-error procedure, resulting in the downgrading of the finished product. Moreover, it leads to enormous economic losses to the industries. In response to this problem, this work presents an approach for modeling and optimizing the flushing operation by employing first-principles and optimal control strategies. We model the flushing operation by integrating the Kendall and Monroe viscosity blending equations with time-dependent component balance equations for lube-oil pipelines. The models developed are validated against the data collected from well-designed flush-study experiments, and a good agreement is observed. We generate theoretical optimal flowrate profiles and provide insights for designing and controlling the flushing operation.
+Author-Swapana Jerpoth
+Author-Kirti Yenkie
+Reference-Book=Optimal Control Theory: Applications to Management Science and Economics
+Reference-Article=Optimization Model for the Detailed Scheduling of Multi-Source Pipelines
