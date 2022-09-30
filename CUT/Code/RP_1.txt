@@ -1,0 +1,14 @@
+Project ID-PS01ED001
+Project Title-Effects of Multithreading
+Keyword-Multithreading
+Keyword-Costs
+Keyword-Switches
+Keyword-Delay
+Keyword-Multiprocessing
+Abstract-As the performance gap between processor and memory grows, memory latency becomes a major bottleneck in achieving high processor utilization. Multithreading has emerged as one of the most promising and exciting techniques used to tolerate memory latency by exploiting thread level parallelism. 
+Author-H.Kwak
+Author-B.Lee
+Author-A.R.Hurson
+References-Book=Mastering C++ Multithreading
+References-Article=B. Catanzaro,, Multiprocessor System Architectures.
+References-Chapter=D. Butenhof,, Programming with POSIX Threads.
